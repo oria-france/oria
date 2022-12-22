@@ -1,0 +1,16 @@
+{% load static %}
+
+<script>
+    function showDiv() {
+        document.getElementById('loading').style.display="inline";
+        document.getElementById('submit').style.display="none";
+    }
+</script>
+
+<p>{{ message }}</p>
+<form method="POST" class="graphs-form" enctype="multipart/form-data">  
+    {% csrf_token %}  
+    {{ form.as_p }}
+    <button type="submit" id="submit" onclick="showDiv()">{{ submit }}</button>  
+    <p id="loading"><img src="{% static 'pictures/loading.gif' %}"></p>
+</form>

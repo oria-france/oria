@@ -1,0 +1,20 @@
+<p>{{ message }}</p>
+
+<form method="POST" class="simulation-form" enctype="multipart/form-data">  
+    {% csrf_token %}  
+    {{ form.as_p }}
+    <button type="submit" class="submit">{{ submit }}</button>  
+</form>
+
+<script defer>
+    var select = document.getElementsByTagName('select');
+    for (var i=0; i<select.length; i++){
+        select[i].addEventListener('change', function(){
+            if (this.value==='---'){
+                this.parentNode.nextSibling.nextSibling.style.display = 'none';
+            } else {
+                this.parentNode.nextSibling.nextSibling.style.display = 'block';
+            }
+        });
+    };
+</script>

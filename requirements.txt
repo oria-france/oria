@@ -1,0 +1,17 @@
+ccxt==2.4.33
+DateTime==4.8
+Django==4.1.4
+google-auth==2.15.0
+google-auth-oauthlib==0.4.6
+google-pasta==0.2.0
+grpcio==1.51.1
+gspread==5.7.2
+keras==2.11.0
+numpy==1.24.0
+pandas==1.5.2
+pathlib==1.0.1
+plotly==5.11.0
+simplejson==3.18.0
+psycopg2==2.9.5
+uWSGI>=2.0.19.1
+ta==0.10.2

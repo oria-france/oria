@@ -1,0 +1,25 @@
+{
+    "id" : "test",
+    "fee" : 0.0002,
+    "mise" : 1000,
+    "open" : {
+        "function" : "basic",
+        "coeff" : 0.2
+    },
+    "close" : {
+        "function" : "basic",
+        "coeff" : 0.2
+    },
+    "stop loss" : {
+        "function" : "y",
+        "coeff" : -0.005
+    },
+    "take profit" : {
+        "function" : "y",
+        "coeff" : 0.005
+    },
+    "time limit" : {
+        "function" : "basic",
+        "coeff" : 600
+    }
+  }

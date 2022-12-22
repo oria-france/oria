@@ -1,0 +1,71 @@
+{
+    "id": "m-202212914518",
+    "data": {
+        "market": "BTC/USDT",
+        "exchange": "binance",
+        "timeframe": "1m"
+    },
+    "x": {
+        "indicators": [
+            "rsi"
+        ],
+        "periods": [
+            2,
+            5,
+            9,
+            14,
+            25,
+            50,
+            100,
+            200,
+            500
+        ],
+        "std": [
+            30.08188856146374,
+            18.202360103131763,
+            13.257176612084857,
+            10.487774818831973,
+            7.7629300667313474,
+            5.45841358588809,
+            3.8810667883392713,
+            2.780573460105029,
+            1.8066718156182155
+        ]
+    },
+    "y": {
+        "target": "pol",
+        "degree": 10,
+        "periods": null,
+        "mean percentage": {
+            "periods": 30,
+            "coeff": 5
+        }
+    },
+    "ia": {
+        "type": "lstm",
+        "window": 5,
+        "layers": 1,
+        "neurons": {
+            "default": 200,
+            "list": [
+                200
+            ]
+        },
+        "batch size": 512,
+        "regularization": {
+            "type": null,
+            "rate": null
+        },
+        "activation": "tanh",
+        "optimization": {
+            "type": "adam",
+            "rate": 0.03
+        },
+        "dropout": 0.2,
+        "training": {
+            "timeframe": "1M",
+            "test size": 0.1,
+            "epochs": 200
+        }
+    }
+}
