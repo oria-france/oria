@@ -10,12 +10,12 @@ COPY ./scripts /scripts
 WORKDIR /oria
 EXPOSE 8000
 
-RUN python -m venv /py && \
-    /py/bin/pip install --upgrade pip && \
+RUN python3 -m venv /py && \
+    /py/bin/pip3 install --upgrade pip && \
     apk add --update --no-cache postgresql-client && \
     apk add --update --no-cache --virtual .tmp-deps \
         build-base postgresql-dev musl-dev linux-headers && \
-    /py/bin/pip install -r /requirements.txt && \
+    /py/bin/pip3 install -r /requirements.txt && \
     apk del .tmp-deps && \
     adduser --disabled-password --no-create-home oria && \
     mkdir -p /vol/web/static && \
